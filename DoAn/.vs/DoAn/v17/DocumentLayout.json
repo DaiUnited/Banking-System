@@ -1,0 +1,128 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\daiun\\Downloads\\Compressed\\Demo\\Demo\\DoAn\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DFA43123-9DFF-4C7A-9C46-CA6B1AD3633D}|DoAn.csproj|c:\\users\\daiun\\downloads\\compressed\\demo\\demo\\doan\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFA43123-9DFF-4C7A-9C46-CA6B1AD3633D}|DoAn.csproj|solutionrelative:loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFA43123-9DFF-4C7A-9C46-CA6B1AD3633D}|DoAn.csproj|C:\\Users\\daiun\\Downloads\\Compressed\\Demo\\Demo\\DoAn\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DFA43123-9DFF-4C7A-9C46-CA6B1AD3633D}|DoAn.csproj|solutionrelative:loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFA43123-9DFF-4C7A-9C46-CA6B1AD3633D}|DoAn.csproj|C:\\Users\\daiun\\Downloads\\Compressed\\Demo\\Demo\\DoAn\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DFA43123-9DFF-4C7A-9C46-CA6B1AD3633D}|DoAn.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFA43123-9DFF-4C7A-9C46-CA6B1AD3633D}|DoAn.csproj|C:\\Users\\daiun\\Downloads\\Compressed\\Demo\\Demo\\DoAn\\khachhangform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DFA43123-9DFF-4C7A-9C46-CA6B1AD3633D}|DoAn.csproj|solutionrelative:khachhangform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFA43123-9DFF-4C7A-9C46-CA6B1AD3633D}|DoAn.csproj|C:\\Users\\daiun\\Downloads\\Compressed\\Demo\\Demo\\DoAn\\naptien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFA43123-9DFF-4C7A-9C46-CA6B1AD3633D}|DoAn.csproj|solutionrelative:naptien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFA43123-9DFF-4C7A-9C46-CA6B1AD3633D}|DoAn.csproj|C:\\Users\\daiun\\Downloads\\Compressed\\Demo\\Demo\\DoAn\\khachhangform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFA43123-9DFF-4C7A-9C46-CA6B1AD3633D}|DoAn.csproj|solutionrelative:khachhangform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 134,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LoginForm.cs",
+              "DocumentMoniker": "C:\\Users\\daiun\\Downloads\\Compressed\\Demo\\Demo\\DoAn\\LoginForm.cs",
+              "RelativeDocumentMoniker": "LoginForm.cs",
+              "ToolTip": "C:\\Users\\daiun\\Downloads\\Compressed\\Demo\\Demo\\DoAn\\LoginForm.cs",
+              "RelativeToolTip": "LoginForm.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T14:52:55.872Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LoginForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\daiun\\Downloads\\Compressed\\Demo\\Demo\\DoAn\\LoginForm.cs",
+              "RelativeDocumentMoniker": "LoginForm.cs",
+              "ToolTip": "C:\\Users\\daiun\\Downloads\\Compressed\\Demo\\Demo\\DoAn\\LoginForm.cs [Design]",
+              "RelativeToolTip": "LoginForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T14:52:54.614Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\daiun\\Downloads\\Compressed\\Demo\\Demo\\DoAn\\MainForm.cs",
+              "RelativeDocumentMoniker": "MainForm.cs",
+              "ToolTip": "C:\\Users\\daiun\\Downloads\\Compressed\\Demo\\Demo\\DoAn\\MainForm.cs [Design]",
+              "RelativeToolTip": "MainForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T14:52:43.78Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "KhachHangForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\daiun\\Downloads\\Compressed\\Demo\\Demo\\DoAn\\KhachHangForm.cs",
+              "RelativeDocumentMoniker": "KhachHangForm.cs",
+              "ToolTip": "C:\\Users\\daiun\\Downloads\\Compressed\\Demo\\Demo\\DoAn\\KhachHangForm.cs [Design]",
+              "RelativeToolTip": "KhachHangForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T14:52:36.082Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "NapTien.cs",
+              "DocumentMoniker": "C:\\Users\\daiun\\Downloads\\Compressed\\Demo\\Demo\\DoAn\\NapTien.cs",
+              "RelativeDocumentMoniker": "NapTien.cs",
+              "ToolTip": "C:\\Users\\daiun\\Downloads\\Compressed\\Demo\\Demo\\DoAn\\NapTien.cs",
+              "RelativeToolTip": "NapTien.cs",
+              "ViewState": "AQIAAEcAAAAAAAAAAAAwwG0AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T14:47:05.944Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "KhachHangForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\daiun\\Downloads\\Compressed\\Demo\\Demo\\DoAn\\KhachHangForm.Designer.cs",
+              "RelativeDocumentMoniker": "KhachHangForm.Designer.cs",
+              "ToolTip": "C:\\Users\\daiun\\Downloads\\Compressed\\Demo\\Demo\\DoAn\\KhachHangForm.Designer.cs",
+              "RelativeToolTip": "KhachHangForm.Designer.cs",
+              "ViewState": "AQIAAG8AAAAAAAAAAAArwIYAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T14:45:51.063Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 225,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

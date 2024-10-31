@@ -1,0 +1,99 @@
+-- Tạo keyspace QLNH
+CREATE KEYSPACE NganHang WITH REPLICATION = {'class': 'SimpleStrategy', 'replication_factor': 1};
+
+-- Sử dụng keyspace QLNH
+USE NganHang;
+
+-- Tạo bảng the_ngan_hang
+CREATE TABLE the_ngan_hang (
+    so_the TEXT PRIMARY KEY,        -- Số thẻ là khóa chính
+    ten_chu_the TEXT,               -- Tên chủ thẻ
+    ngay_het_han TEXT,              -- Ngày hết hạn
+    ma_pin TEXT,                    -- Mã pin (cần mã hóa khi lưu trữ)
+    so_du DECIMAL                   -- Số dư tài khoản
+);
+
+-- Dữ liệu mẫu cho bảng the_ngan_hang
+INSERT INTO the_ngan_hang (so_the, ten_chu_the, ngay_het_han, ma_pin, so_du)
+VALUES ('1234567890123456', 'Nguyễn Văn A', '12/2026', '1234', 5000000.00);
+
+INSERT INTO the_ngan_hang (so_the, ten_chu_the, ngay_het_han, ma_pin, so_du)
+VALUES ('2345678901234567', 'Trần Thị B', '08/2025', '5678', 2000000.00);
+
+-- Tạo bảng lich_su_giao_dich
+CREATE TABLE lich_su_giao_dich (
+    so_the TEXT,                    -- Số thẻ liên quan đến giao dịch
+    ma_giao_dich UUID,              -- Mã giao dịch duy nhất
+    ngay_giao_dich TIMESTAMP,       -- Ngày giờ thực hiện giao dịch
+    loai_giao_dich TEXT,            -- Loại giao dịch (nạp tiền, rút tiền, chuyển khoản, thanh toán hóa đơn)
+    so_tien DECIMAL,                -- Số tiền giao dịch
+    so_the_nhan TEXT,               -- Số thẻ nhận (nếu là chuyển khoản)
+    mo_ta TEXT,                     -- Mô tả giao dịch
+    PRIMARY KEY (so_the, ngay_giao_dich, ma_giao_dich)
+) WITH CLUSTERING ORDER BY (ngay_giao_dich DESC);
+
+-- Dữ liệu mẫu cho bảng lich_su_giao_dich
+INSERT INTO lich_su_giao_dich (so_the, ma_giao_dich, ngay_giao_dich, loai_giao_dich, so_tien, mo_ta)
+VALUES ('1234567890123456', uuid(), toTimestamp(now()), 'Nạp tiền', 1000000.00, 'Nạp tiền vào thẻ tại cây ATM');
+
+INSERT INTO lich_su_giao_dich (so_the, ma_giao_dich, ngay_giao_dich, loai_giao_dich, so_tien, so_the_nhan, mo_ta)
+VALUES ('1234567890123456', uuid(), toTimestamp(now()), 'Chuyển khoản', 500000.00, '2345678901234567', 'Chuyển tiền đến Trần Thị B');
+
+INSERT INTO lich_su_giao_dich (so_the, ma_giao_dich, ngay_giao_dich, loai_giao_dich, so_tien, mo_ta)
+VALUES ('2345678901234567', uuid(), toTimestamp(now()), 'Rút tiền', 200000.00, 'Rút tiền từ thẻ tại cây ATM');
+
+-- Tạo bảng nguoi_dung
+CREATE TABLE nguoi_dung (
+    so_the TEXT PRIMARY KEY,        -- Số thẻ là khóa chính
+    ho_ten TEXT,                    -- Tên đầy đủ của người dùng
+    email TEXT,                     -- Email người dùng
+    so_dien_thoai TEXT              -- Số điện thoại
+);
+
+-- Dữ liệu mẫu cho bảng nguoi_dung
+INSERT INTO nguoi_dung (so_the, ho_ten, email, so_dien_thoai)
+VALUES ('1234567890123456', 'Nguyễn Văn A', 'nguyenvana@example.com', '0909123456');
+
+INSERT INTO nguoi_dung (so_the, ho_ten, email, so_dien_thoai)
+VALUES ('2345678901234567', 'Trần Thị B', 'tranthib@example.com', '0909234567');
+
+-- Tạo bảng hoa_don
+CREATE TABLE hoa_don (
+    ma_hoa_don UUID PRIMARY KEY,    -- Mã hóa đơn duy nhất
+    so_the TEXT,                    -- Số thẻ thanh toán
+    ngay_tao TIMESTAMP,             -- Ngày tạo hóa đơn
+    so_tien DECIMAL,                -- Số tiền hóa đơn
+    noi_dung TEXT                   -- Nội dung thanh toán hóa đơn
+);
+
+-- Dữ liệu mẫu cho bảng hoa_don
+INSERT INTO hoa_don (ma_hoa_don, so_the, ngay_tao, so_tien, noi_dung)
+VALUES (uuid(), '1234567890123456', toTimestamp(now()), 200000.00, 'Thanh toán tiền điện');
+
+INSERT INTO hoa_don (ma_hoa_don, so_the, ngay_tao, so_tien, noi_dung)
+VALUES (uuid(), '2345678901234567', toTimestamp(now()), 500000.00, 'Thanh toán tiền internet');
+
+
+-- Tạo bảng chuyen_khoan
+CREATE TABLE chuyen_khoan (
+    ma_giao_dich UUID PRIMARY KEY,  -- Mã giao dịch chuyển khoản duy nhất
+    so_the_gui TEXT,                -- Số thẻ gửi
+    so_the_nhan TEXT,               -- Số thẻ nhận
+    ngay_giao_dich TIMESTAMP,       -- Ngày thực hiện giao dịch
+    so_tien DECIMAL                 -- Số tiền chuyển khoản
+);
+
+-- Dữ liệu mẫu cho bảng chuyen_khoan
+INSERT INTO chuyen_khoan (ma_giao_dich, so_the_gui, so_the_nhan, ngay_giao_dich, so_tien)
+VALUES (uuid(), '1234567890123456', '2345678901234567', toTimestamp(now()), 300000.00);
+
+-- Tạo bảng tài khoản
+CREATE TABLE tai_khoan (
+    so_the TEXT PRIMARY KEY,        -- Số thẻ (tên đăng nhập)
+    mat_khau TEXT,                  -- Mật khẩu (cần mã hóa)
+    loai_quyen TEXT                 -- Quyền truy cập (admin, chu_the, nhan_vien)
+);
+
+INSERT INTO tai_khoan (so_the, mat_khau, loai_quyen)
+VALUES ('12345678900', '123456789', 'chu_the');
+
